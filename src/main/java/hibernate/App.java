@@ -28,7 +28,7 @@ public class App
 //        System.out.println(factory.isClosed());
         
         Student stu = new Student();
-        stu.setId(103);
+        stu.setId(101);
         stu.setName("Sunish");
         stu.setCity("DELHI");
         
@@ -42,10 +42,11 @@ public class App
         
         try {
         	
-        	FileInputStream fis = new FileInputStream("src/main/java/ak.jpg");
+        	FileInputStream fis = new FileInputStream("src/main/java/a.jpg");
             byte[] image = new byte[fis.available()];
             fis.read(image);
             add.setImage(image);
+            fis.close();
         }catch(Exception e) {
         	e.printStackTrace();
         }
@@ -57,9 +58,9 @@ public class App
         
         Transaction tx =  session.beginTransaction();
         
-        session.save(add);
-        session.save(stu);
-        
+//        session.save(add);
+//        session.save(stu);
+//        
         tx.commit();
         
         
