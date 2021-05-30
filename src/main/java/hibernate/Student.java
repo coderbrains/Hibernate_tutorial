@@ -3,6 +3,22 @@ package hibernate;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/*
+ * @author Awanish kumar singh...
+ * 	
+ * @Entity - Used to identify entity property..;
+ * @Table - Used to identify table quality..	
+ * @Id - used to identify primary id of a table.
+ * @GeneratedValue - hibernate will automatically generate values for that using an internal sequence.
+ * 					Therefore we dont have to set manually.
+ * @Column - Used to identify the new column name.
+ * @Transient - tells the hibernate not to save the field.
+ * @Temporal - tells the hibernate the format in which the date needs to be saved.
+ * @Lob  - tells the hibernate that this is the large object and not the simple one. e.g - Blob, Clob.
+ * Advanced columns - @OneToOne, @OneToMany, @ManyToMany, @ManyToOne , @JoinColumn etc...
+ * 
+ */
+
 @Entity
 public class Student {
 
