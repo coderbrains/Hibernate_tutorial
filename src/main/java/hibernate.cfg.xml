@@ -24,6 +24,8 @@
 		<mapping class = "onetoonemapping.A"/>
 		<mapping class = "onetomanyrelations.Ans"/>
 		<mapping class = "onetomanyrelations.Que"/>
+		<mapping class = "manytomany.Employee"/>
+		<mapping class = "manytomany.Projects"/>
 		
 	</session-factory>
 
