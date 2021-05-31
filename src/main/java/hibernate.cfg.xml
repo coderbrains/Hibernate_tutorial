@@ -15,6 +15,9 @@
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
+		<property name = "format_sql">true</property>
+		
+		
 		<mapping class="hibernate.Student"/>
 		<mapping class= "hibernate.Address"/>
 		<mapping class = "hibernate.Student1"/>
@@ -26,6 +29,7 @@
 		<mapping class = "onetomanyrelations.Que"/>
 		<mapping class = "manytomany.Employee"/>
 		<mapping class = "manytomany.Projects"/>
+		<mapping class = "hibernate.ABC"/>
 		
 	</session-factory>
 
