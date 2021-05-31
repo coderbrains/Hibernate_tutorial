@@ -22,6 +22,8 @@
 		<mapping class = "onetoonemapping.Answers"/>
 		<mapping class = "onetoonemapping.Q" />
 		<mapping class = "onetoonemapping.A"/>
+		<mapping class = "onetomanyrelations.Ans"/>
+		<mapping class = "onetomanyrelations.Que"/>
 		
 	</session-factory>
 
