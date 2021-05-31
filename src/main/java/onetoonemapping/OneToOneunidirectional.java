@@ -23,21 +23,17 @@ public class OneToOneunidirectional {
 		Transaction tx = session.beginTransaction();
 		
 		Questions q = new Questions();
-		q.setQuestionid(105);
+		q.setQuestionid(055);
 		q.setQuestions("What is c?");
 		
 		
 		Answers ans = new Answers();
-		ans.setAnswerid(106);
-		ans.setAns("c is also a normal programming language...");
+		ans.setAnswerid(54);
+		ans.setAns("C is also a normal programming language...");
 		q.setAnswers(ans);
 		
-//		session.save(ans);
-//		session.save(q);
-		
-		Questions questions1 = session.get(Questions.class, 1);
-		System.out.println(questions1.getQuestions());
-		System.out.println(questions1.getAnswers().getAns());
+		session.save(ans);
+		session.save(q);
 		
 		tx.commit();
 		session.close();
@@ -114,6 +110,7 @@ class Answers{
 	@Id
 	private int answerid;
 	private String ans;
+	
 	public Answers(int answerid, String ans) {
 		super();
 		this.answerid = answerid;
@@ -151,8 +148,7 @@ class Answers{
 	public String toString() {
 		return "Answers [answerid=" + answerid + ", ans=" + ans + "]";
 	}
-	
-	
-	
-	
+	/**
+	 * @return the q
+	 */
 }
