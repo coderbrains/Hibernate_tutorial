@@ -17,28 +17,32 @@ public class InsertStudent {
 		Session session = factory.openSession();
 		Transaction t = session.beginTransaction();
 
-		Studentt student1 = new Studentt();
-		student1.setAge(202);
-		student1.setName("Awanish Kumar");
-		student1.setBranch("ME");
-		student1.setId(10153);
+		for(int i = 0;i <  100 ;i++) {
 		
-		//inserting the student in the  database/
+			Studentt student1 = new Studentt();
+			student1.setAge(i);
+			student1.setName("Awanish Kumar" + i);
+			student1.setBranch("ME" + i);
+			student1.setId(i * 100);
+			session.save(student1);
+			
+		}
 		
-//		session.save(student1);
+		
+		
 		
 		
 		
 		// fetching all the student from the database.
 		
-		String q  = "from Studentt";
-		Query query = session.createQuery(q);
-		List<Studentt> list = query.list(); 
-		
-		for(Studentt student : list) {
-			System.out.println(student);
-		}
-		
+//		String q  = "from Studentt";
+//		Query query = session.createQuery(q);
+//		List<Studentt> list = query.list(); 
+//		
+//		for(Studentt student : list) {
+//			System.out.println(student);
+//		}
+//		
 		//fetching all the student from the databasse having common attribute.
 		
 //		q  = "from Studentt where age = 202";
@@ -81,14 +85,14 @@ public class InsertStudent {
 		
 		// Joining two tables from the hql;
 		
-		query = session.createQuery("select q.qid, q.questions , a.ans from Que as q inner join q.list as a");
-		
-		List<Object[]> list3 = query.getResultList();
-		
-		for(Object[] arr: list3) {
-			System.out.println(Arrays.toString(arr));
-		}
-		
+//		query = session.createQuery("select q.qid, q.questions , a.ans from Que as q inner join q.list as a");
+//		
+//		List<Object[]> list3 = query.getResultList();
+//		
+//		for(Object[] arr: list3) {
+//			System.out.println(Arrays.toString(arr));
+//		}
+//		
 		
 		
 		t.commit();
