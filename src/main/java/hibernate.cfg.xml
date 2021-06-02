@@ -30,6 +30,7 @@
 		<mapping class = "manytomany.Employee"/>
 		<mapping class = "manytomany.Projects"/>
 		<mapping class = "hibernate.ABC"/>
+		<mapping class = "hqlQuery.Studentt"/>
 		
 	</session-factory>
 
